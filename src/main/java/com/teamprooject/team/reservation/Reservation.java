@@ -8,6 +8,8 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+
 @Document(collection = "reservations")
 @Getter
 @Setter
@@ -22,8 +24,10 @@ public class Reservation {
     private String lastName;
     private String email;
     private String phone;
+    private String roomId;
     private RoomRole roomRole;
-    private int roomNum;
     private int roomPrice;
     private int roomCount;
+    private LocalDate startDate;
+    private LocalDate endDate;
 }

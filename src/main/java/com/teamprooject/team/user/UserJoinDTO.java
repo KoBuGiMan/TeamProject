@@ -15,8 +15,7 @@ public class UserJoinDTO {
     private String loginId;
     private String password;
 
-    private String firstName;
-    private String lastName;
+    private String name;
     private String email;
     private String phone;
 
@@ -27,8 +26,7 @@ public class UserJoinDTO {
         userJoinDTO.setPassword(user.getPassword());
         userJoinDTO.setEmail(user.getEmail());
         userJoinDTO.setPhone(user.getPhone());
-        userJoinDTO.setFirstName(user.getFirstName());
-        userJoinDTO.setLastName(user.getLastName());
+        userJoinDTO.setName(user.getName());
 
         return userJoinDTO;
 

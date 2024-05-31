@@ -27,8 +27,8 @@ public class TeamApplication implements ApplicationListener<ContextRefreshedEven
 
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
-//	    userService.mongoInsert();
-//		roomService.mongoRoomInsert();
+	    //userService.mongoInsert();
+		//roomService.mongoRoomInsert();
 		//resService.mongoReservationInsert();
 	}
 }

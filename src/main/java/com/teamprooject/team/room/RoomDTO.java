@@ -9,7 +9,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class RoomDTO {
 
-    private int roomNum;
     private int roomPrice;
     private int roomCount;
     private RoomRole roomRole;
@@ -17,7 +16,6 @@ public class RoomDTO {
 
     public static RoomDTO toRoomDTO(Room room){
         RoomDTO roomDto  = new RoomDTO();
-        roomDto.setRoomNum(room.getRoomNum());
         roomDto.setRoomPrice(room.getRoomPrice());
         roomDto.setRoomCount(room.getRoomCount());
 

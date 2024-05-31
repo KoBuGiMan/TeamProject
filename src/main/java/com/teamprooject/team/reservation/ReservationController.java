@@ -1,5 +1,8 @@
 package com.teamprooject.team.reservation;
 
+import com.teamprooject.team.room.Room;
+import com.teamprooject.team.room.RoomRepository;
+import com.teamprooject.team.room.RoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +15,7 @@ import java.util.List;
 public class ReservationController {
     @Autowired
     private final ReservationService reservationService;
+    private final RoomService roomService;
 
     @PostMapping
     public Reservation createReservation(@RequestBody Reservation res) {
@@ -31,5 +35,11 @@ public class ReservationController {
         reservationService.deleteReservationById(id);
     }
 
+    @PostMapping("success")
+    public void dateTest(@RequestBody Reservation res){
+        System.out.println("Received Reservation: " + res.getStartDate() + " " + res.getEndDate() + " " + res.getRoomId());
+        System.out.println(roomService.getRoomById(res.getRoomId()).getRoomRole());
+
+    }
 
 }

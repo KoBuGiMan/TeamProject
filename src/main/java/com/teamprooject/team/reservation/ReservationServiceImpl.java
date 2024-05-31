@@ -34,13 +34,14 @@ public class ReservationServiceImpl  implements ReservationService{
        reservationRepository.deleteById(id);
     }
 
+
+
     public void mongoReservationInsert(){
         Reservation res = new Reservation();
         res.setFirstName("rla");
         res.setLastName("xogh");
         res.setEmail("rlaxogh@naver.com");
         res.setPhone("01011111111");
-        res.setRoomNum(201);
         res.setRoomPrice(80000);
         res.setRoomCount(1);
         res.setRoomRole(RoomRole.STANDARD);
@@ -50,7 +51,6 @@ public class ReservationServiceImpl  implements ReservationService{
         res2.setLastName("xogh");
         res2.setEmail("rlaxogh@naver.com");
         res2.setPhone("01011111111");
-        res2.setRoomNum(302);
         res2.setRoomPrice(100000);
         res2.setRoomCount(1);
         res2.setRoomRole(RoomRole.DELUXE);
@@ -60,7 +60,6 @@ public class ReservationServiceImpl  implements ReservationService{
         res3.setLastName("xogh");
         res3.setEmail("rlaxogh@naver.com");
         res3.setPhone("01011111111");
-        res3.setRoomNum(401);
         res3.setRoomPrice(120000);
         res3.setRoomCount(1);
         res3.setRoomRole(RoomRole.LUXURY);

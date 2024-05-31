@@ -19,7 +19,6 @@ public class Room {
 
     @Id
     private String id;
-    private int roomNum;
     private int roomPrice;
     private int roomCount;
     private RoomRole roomRole;
