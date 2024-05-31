@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../CSS/Login.css";
 
-function Login() {
+
+function Login({ changeLoginId, changeIsLogin }) {
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
@@ -18,6 +20,15 @@ function Login() {
       });
   }, []);
 
+  useEffect(() => {
+    if (isLogin) {
+      console.log("isLogin: " + isLogin);
+      changeLoginId(loginId);
+      changeIsLogin(isLogin);
+      navigate("/");
+    }
+  }, [isLogin, navigate]);
+
   const OnChangeId = (data) => {
     setLoginId(data.target.value);
   };
@@ -30,10 +41,8 @@ function Login() {
       if (foundUser) {
         if (password === foundUser.password) {
           setIsLogin(true);
-          console.log("Login successful!");
-          navigate("/");
         } else {
-          alert("비밀번호가 틀렸습니다.");
+          alert("비밀번호가 틀렸습니다");
         }
       } else {
         alert("아이디가 틀렸습니다.");
@@ -43,25 +52,50 @@ function Login() {
     }
   };
 
+  const createAccount = () => {
+    navigate("/createaccount");
+  };
+
   return (
     <>
-      <h1>Login</h1>
-      <form>
-        <input
-          type="text"
-          value={loginId}
-          onChange={OnChangeId}
-          placeholder="ID"
-        />
+      <div className="body">
+        <span className="signin">Sign In</span>
+        <hr />
         <br />
-        <input
-          type="text"
-          onChange={OnChangePW}
-          value={password}
-          placeholder="Password"
-        />
-      </form>
-      <button onClick={Login}>로그인</button>
+        <form className="textArea">
+          <div className="text-div">
+            <div>
+              <div className="colum">아이디</div>
+              <input
+                className="text"
+                minLength="8"
+                type="text"
+                value={loginId}
+                onChange={OnChangeId}
+                placeholder=" ID"
+              />
+            </div>
+            <br />
+            <div>
+              <div className="colum">비밀번호</div>
+              <input
+                className="text"
+                minLength="8"
+                type="text"
+                onChange={OnChangePW}
+                value={password}
+                placeholder=" Password"
+              />
+            </div>
+          </div>
+          <div className="loginbtn" onClick={Login}>
+            <div className="loginbtn-text">Login</div>
+          </div>
+          <div className="create" onClick={createAccount}>
+            <div className="create-text">Create Account</div>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
