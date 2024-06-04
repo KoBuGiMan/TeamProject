@@ -97,7 +97,7 @@ function CreateAccount() {
   };
 
   return (
-    <div className="body">
+    <div className="account-body">
       <h2 className="join">Join Now</h2>
       <hr />
       <br /> <br />
