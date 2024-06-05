@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'SF_HambakSnow';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+.footerBody {
+  position: static;
+  margin: 0 auto;
+  width: 1100px;
+  height: 120px;
+  background-color: #cccccc;
+  text-align: center;
+  background-color: #f4eedd;
+
+}
+
+.footer-logo-img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  right: 13%;
+  top: 20%;
+}
+
+.footer-title {
+  display: inline-block;
+  position: relative;
+  bottom: 32%;
+  font-size: 30px;
+  font-family: 'SF_HambakSnow';
+  font-weight: 800;
+  right: 20px;
+}
+
+.footer-phone {
+  font-size: 15px;
+  position: relative;
+  bottom: 30%;
+  font-family: 'SF_HambakSnow';
+  left: 2%;
+  text-align: centers;
+}
+
+.footer-front {
+  font-family: 'SF_HambakSnow';
+  font-size: 15px;
+}
+
+.footer-korean {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 600;
+}
+
+.footer-people {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 600;
+}
+
+.footer-second {
+  position: relative;
+  left: 24px;
+  bottom: 35px;
+  font-size: 15px;
+}
+
+.footer-under-text {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  position: relative;
+  left: 17px;
+  bottom: 30px;
+  font-size: 10px;
+}
