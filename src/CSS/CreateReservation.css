@@ -1,0 +1,299 @@
+.createReservationBody {
+  width: 1100px;
+  height: 1000px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.reservationTitle {
+  height: 100px;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.reservationTitle-text {
+  position: relative;
+  font-size: 34px;
+  top: 25px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.selectBar {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+
+
+.startDate {
+  width: 220px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.startDate-text1 {
+  position: relative;
+  font-size: 14px;
+  top: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  color: rgb(156, 156, 156);
+}
+
+.startDate-text2 {
+  position: relative;
+  font-size: 17px;
+  top: 40px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  cursor: pointer;
+}
+
+.showDate {
+  width: 150px;
+  text-align: center;
+  background-color: white;
+}
+
+.showDate-text1 {
+  position: relative;
+  font-size: 14px;
+  top: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+
+}
+
+.showDate-text2 {
+  position: relative;
+  top: 40px;
+  font-size: 17px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+
+}
+
+.endDate {
+  width: 220px;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.endDate-text1 {
+  position: relative;
+  font-size: 14px;
+  top: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  color: rgb(156, 156, 156);
+}
+
+.endDate-text2 {
+  position: relative;
+  font-size: 17px;
+  top: 40px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  cursor: pointer;
+}
+
+.people {
+  width: 90px;
+  text-align: center;
+}
+
+.people-text1 {
+  position: relative;
+  font-size: 14px;
+  top: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  color: rgb(156, 156, 156);
+}
+
+.people-text2 {
+  position: relative;
+  font-size: 17px;
+  top: 40px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  margin: 0 auto;
+  top: 30px;
+  width: 140px;
+  height: 50px;
+  background-color: rgb(39, 39, 39);
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-text {
+  position: relative;
+  font-size: 17px;
+  top: 14px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  color: white;
+}
+
+.datePick {
+  width: 800px;
+}
+
+.startCalendar {
+  display: inline-block;
+  position: fixed;
+  z-index: 3;
+}
+
+.endCalendar {
+  display: inline-block;
+  position: fixed;
+  margin-left: 355px;
+  z-index: 3;
+}
+
+.people-list {
+  position: fixed;
+  margin-left: 590px;
+  width: 360px;
+  height: 120px;
+  text-align: center;
+}
+
+.people-list-box {
+  width: 22%;
+  height: 100%;
+  display: inline-block;
+  margin: 3px;
+  border: 1px black solid;
+  border-radius: 60px;
+}
+
+.people-list-box-text {
+  position: relative;
+  top: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-size: 15px;
+}
+
+.plus {
+  position: relative;
+  top: 40px;
+  right: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  cursor: pointer;
+}
+
+.object-num {
+  position: relative;
+  top: 40px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+
+}
+
+.minus {
+  position: relative;
+  top: 41px;
+  left: 20px;
+  font-size: 20px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  cursor: pointer;
+}
+
+.roomList-body {
+  width: 100%;
+  height: 800px;
+}
+
+.roomList-title {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-size: 20px;
+  position: relative;
+  top: 30px;
+  border-left: 4px solid brown;
+  height: 25px;
+}
+
+.roomList-title-text {
+  position: relative;
+  left: 10px;
+  top: 3px;
+}
+
+.standard-area {
+  position: relative;
+  border-top: 1px solid rgb(223, 223, 223);
+  border-bottom: 1px solid rgb(223, 223, 223);
+  height: 225px;
+  top: 70px;
+
+}
+
+
+
+
+.deluxe-area {
+  position: relative;
+  height: 225px;
+  top: 70px;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+
+
+
+.luxury-area {
+  position: relative;
+  height: 225px;
+  top: 70px;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+
+.area-img {
+  position: relative;
+  top: 28px;
+  width: 270px;
+  height: 150px;
+}
+
+.area-title {
+  position: relative;
+  font-family: 'SF_HambakSnow';
+  font-size: 30px;
+  border-bottom: 3px solid black;
+  top: 10PX;
+}
+
+.area-info {
+  position: relative;
+  left: 310px;
+  bottom: 150px;
+  font-size: 17px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  height: 100%;
+}
+
+.area-info-text {
+  position: relative;
+  margin-top: 30px
+}
+
+.area-button {
+  position: relative;
+  left: 1000px;
+  bottom: 280px;
+  background-color: rgb(39, 39, 39);
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+}
+
+.area-button-text {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  position: relative;
+  top: 9px;
+  font-size: 17px;
+  color: white;
+}
