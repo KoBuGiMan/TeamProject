@@ -7,7 +7,7 @@ function LoginHeader({ loginId }) {
     <div>
       <nav className="navbar">
         <Link to="/" className="header-link">
-          TEAM HOTEL
+          <img className="logo" src="./images/logo.png" alt="/" />
         </Link>
         <Link to="/reservation" className="link">
           예약

@@ -1,22 +1,28 @@
-import { addMonths, format } from "date-fns";
+import { addMonths, format, getDate } from "date-fns";
 import { useEffect, useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import { ko } from "date-fns/locale";
 import People from "./People.js";
+import axios from "axios";
 
-function DateCheck() {
+function DateCheck({
+  startDate,
+  setStartDate,
+  endDate,
+  setEndDate,
+  sum,
+  setSum,
+}) {
   const [startDateOpen, setStartDateOpen] = useState(false);
   const [endDateOpen, setEndDateOpen] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [search, setSearch] = useState(false);
   const [peopleOpen, setPeopleOpen] = useState(false);
-
+  const [count, setCount] = useState([]);
   const [adult, setAdult] = useState(2);
   const [child, setChild] = useState(0);
   const [baby, setBaby] = useState(0);
   const [room, setRoom] = useState(1);
 
-  const [sum, setSum] = useState(1);
   const handleChangeStart = (e) => {
     setStartDateOpen(!startDateOpen);
     setStartDate(e);
@@ -42,7 +48,7 @@ function DateCheck() {
   const dateSum = () => {
     let sumEx = Math.abs(endDate.getTime() - startDate.getTime());
     sumEx = Math.ceil(sumEx / (1000 * 60 * 60 * 24));
-    setSum(sumEx);
+    setSum(sumEx - 1);
     console.log(sum);
   };
 
@@ -54,8 +60,40 @@ function DateCheck() {
   };
 
   useEffect(() => {
+    setEndDate(new Date(new Date().setDate(startDate.getDate() + 1)));
+  }, [startDate]);
+
+  useEffect(() => {
     dateSum();
-  }, [startDate, endDate]);
+  }, [endDate]);
+
+  const dateCheck = async () => {
+    try {
+      const response = await axios.post("/roomList/dateCheck", {
+        startDate: startDate,
+        endDate: endDate,
+      });
+
+      const counts = response.data;
+      setCount(counts);
+      setSearch(!search); // search 상태를 업데이트하여 렌더링 갱신
+      console.log(counts); // 응답으로 받은 방 개수를 출력
+    } catch (error) {
+      console.error("Error fetching room counts:", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   fetch("/roomList/dateCheck")
+  //     .then((res) => {
+  //       return res;
+  //     })
+  //     .then((data) => {
+  //       setCount(data);
+  //       console.log(count);
+  //     });
+  // }, [search]);
+
   registerLocale("ko", ko);
   return (
     <>
@@ -72,7 +110,6 @@ function DateCheck() {
           <div>
             <span className="showDate-text1">📅</span>
           </div>
-
           <span className="showDate-text2">{sum}박</span>
         </div>
         <div onClick={endClick} className="endDate">
@@ -115,7 +152,7 @@ function DateCheck() {
             </span>
           </div>
         </div>
-        <div className="search">
+        <div onClick={dateCheck} className="search">
           <span className="search-text">검색</span>
         </div>
       </div>
@@ -127,7 +164,7 @@ function DateCheck() {
             dateFormat="yyyy-MM.dd"
             shouldCloseOnSelect
             minDate={new Date()}
-            maxDate={addMonths(new Date(), 5)}
+            maxDate={addMonths(new Date(), 1)}
             selected={startDate}
             locale="ko"
             inline
@@ -141,7 +178,7 @@ function DateCheck() {
             dateFormat="yyyy-MM.dd"
             shouldCloseOnSelect
             minDate={startDate}
-            maxDate={addMonths(new Date(), 5)}
+            maxDate={addMonths(new Date(), 1)}
             selected={endDate}
             locale="ko"
             inline

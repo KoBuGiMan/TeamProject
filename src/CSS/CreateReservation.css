@@ -1,6 +1,6 @@
 .createReservationBody {
   width: 1100px;
-  height: 1000px;
+  height: 1300px;
   margin: 0 auto;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -141,23 +141,28 @@
 
 .startCalendar {
   display: inline-block;
-  position: fixed;
+  position: relative;
   z-index: 3;
+  height: 10px;
+  width: 242px;
 }
 
 .endCalendar {
   display: inline-block;
-  position: fixed;
-  margin-left: 355px;
+  position: relative;
+  margin-left: 110px;
   z-index: 3;
+  height: 10px;
+  width: 242px;
 }
 
 .people-list {
-  position: fixed;
+  position: relative;
   margin-left: 590px;
   width: 360px;
   height: 120px;
   text-align: center;
+  border: 2px black solid;
 }
 
 .people-list-box {
@@ -165,8 +170,6 @@
   height: 100%;
   display: inline-block;
   margin: 3px;
-  border: 1px black solid;
-  border-radius: 60px;
 }
 
 .people-list-box-text {
@@ -296,4 +299,11 @@
   top: 9px;
   font-size: 17px;
   color: white;
+}
+
+.area-price {
+  position: relative;
+  left: 560px;
+  bottom: 13px;
+  font-size: 21px;
 }

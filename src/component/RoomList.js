@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function RoomList() {
+function RoomList({
+  isLogin,
+  startDate,
+  setStartDate,
+  endDate,
+  setEndDate,
+  sum,
+}) {
   const [rooms, setRooms] = useState([]);
   const [price, setPrice] = useState([]);
+  const [role, setRole] = useState([]);
+  const [standardCnt, setStandardCnt] = useState([]);
+  const [deluxeCnt, setDeluxeCnt] = useState([]);
+  const [luxuryCnt, setLuxuryCnt] = useState([]);
   const nav = useNavigate();
 
   useEffect(() => {
@@ -15,13 +26,28 @@ function RoomList() {
 
         const prices = data.map((room) => room.roomPrice);
         setPrice(prices);
+
+        const roles = data.map((room) => room.roomRole);
+        setRole(roles);
       } catch (error) {
         console.error("Error fetching rooms:", error);
       }
     };
     fetchRooms();
   }, []);
-  
+
+  const changePage = () => {
+    nav("/reservation/reservationRoom");
+  };
+
+  const loginCheck = () => {
+    if (isLogin) {
+      changePage();
+    } else {
+      alert("로그인이 필요합니다");
+      nav("/login");
+    }
+  };
 
   return (
     <>
@@ -40,7 +66,7 @@ function RoomList() {
           </div>
           <div className="area-info">
             <div className="area-info-text">
-              <span>객실등급 : 스탠다드</span>
+              <span>객실등급 : {role[0]}</span>
             </div>
             <div className="area-info-text">
               <span>최대인원 : 2명</span>
@@ -48,9 +74,15 @@ function RoomList() {
             <div className="area-info-text">
               <span>체크인 17:00 ~ 체크아웃 11:00</span>
             </div>
+            <div className="area-info-text">
+              <span>잔여객실: </span>
+            </div>
+            <div style={{ left: "573px" }} className="area-price">
+              {price[0] * sum} ₩
+            </div>
           </div>
-          <div className="area-button">
-            <span className="area-button-text">버튼</span>
+          <div onClick={loginCheck} className="area-button">
+            <span className="area-button-text">예약</span>
           </div>
         </div>
         <div className="deluxe-area">
@@ -64,7 +96,7 @@ function RoomList() {
           </div>
           <div className="area-info">
             <div className="area-info-text">
-              <span>객실등급 : 디럭스</span>
+              <span>객실등급 : {role[1]}</span>
             </div>
             <div className="area-info-text">
               <span>최대인원 : 4명</span>
@@ -72,9 +104,13 @@ function RoomList() {
             <div className="area-info-text">
               <span>체크인 17:00 ~ 체크아웃 11:00</span>
             </div>
+            <div className="area-info-text">
+              <span>객실등급 : 스탠다드</span>
+            </div>
+            <div className="area-price">{price[1] * sum} ₩</div>
           </div>
-          <div className="area-button">
-            <span className="area-button-text">버튼</span>
+          <div onClick={loginCheck} className="area-button">
+            <span className="area-button-text">예약</span>
           </div>
         </div>
         <div className="luxury-area">
@@ -87,7 +123,7 @@ function RoomList() {
             />
             <div className="area-info">
               <div className="area-info-text">
-                <span>객실등급 : 럭셔리</span>
+                <span>객실등급 : {role[2]}</span>
               </div>
               <div className="area-info-text">
                 <span>최대인원 : 성인 6명</span>
@@ -95,9 +131,17 @@ function RoomList() {
               <div className="area-info-text">
                 <span>체크인 17:00 ~ 체크아웃 11:00</span>
               </div>
+              <div className="area-info-text">
+                <span>객실등급 : 스탠다드</span>
+              </div>
+              <div className="area-price">{price[2] * sum} ₩</div>
             </div>
-            <div className="area-button" style={{ bottom: "172px" }}>
-              <span className="area-button-text">버튼</span>
+            <div
+              onClick={loginCheck}
+              className="area-button"
+              style={{ bottom: "195px" }}
+            >
+              <span className="area-button-text">예약</span>
             </div>
           </div>
         </div>

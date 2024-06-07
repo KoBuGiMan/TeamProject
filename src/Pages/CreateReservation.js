@@ -5,21 +5,19 @@ import "../CSS/CreateReservation.css";
 import DateCheck from "../component/DateCheck";
 import RoomList from "../component/RoomList";
 
-function CreateReservation() {
+function CreateReservation({
+  isLogin,
+  startDate,
+  setStartDate,
+  endDate,
+  setEndDate,
+  sum,
+  setSum,
+}) {
   const [room, setRoom] = useState([]);
   const [roomId, setRoomId] = useState("");
 
-  // const OnDateClick = () => {
-  //   axios
-  //     .post("/reservations/success", {
-  //       startDate: startDate,
-  //       endDate: endDate,
-  //       roomId: roomId,
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
+ 
 
   useEffect(() => {
     fetch("/rooms")
@@ -31,10 +29,6 @@ function CreateReservation() {
       });
   }, []);
 
-  const seleced = (roomNum) => {
-    setRoomId(roomNum);
-  };
-
   return (
     <div className="createReservationBody">
       <div>
@@ -42,12 +36,26 @@ function CreateReservation() {
           <span className="reservationTitle-text">날짜, 인원 선택</span>
         </div>
       </div>
-      <DateCheck />
+      <DateCheck
+        startDate={startDate}
+        setStartDate={setStartDate}
+        endDate={endDate}
+        setEndDate={setEndDate}
+        sum={sum}
+        setSum={setSum}
+      />
       <div>
         {/* <div>{roomId}</div>
         <button onClick={OnDateClick}>입력</button> */}
       </div>
-      <RoomList />
+      <RoomList
+        startDate={startDate}
+        setStartDate={setStartDate}
+        endDate={endDate}
+        setEndDate={setEndDate}
+        isLogin={isLogin}
+        sum={sum}
+      />
     </div>
   );
 }
