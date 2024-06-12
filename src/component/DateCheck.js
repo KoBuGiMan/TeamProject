@@ -12,16 +12,19 @@ function DateCheck({
   setEndDate,
   sum,
   setSum,
+  count,
+  setCount,
+  adult,
+  setAdult,
+  child,
+  setChild,
+  baby,
+  setBaby,
 }) {
   const [startDateOpen, setStartDateOpen] = useState(false);
   const [endDateOpen, setEndDateOpen] = useState(false);
   const [search, setSearch] = useState(false);
   const [peopleOpen, setPeopleOpen] = useState(false);
-  const [count, setCount] = useState([]);
-  const [adult, setAdult] = useState(2);
-  const [child, setChild] = useState(0);
-  const [baby, setBaby] = useState(0);
-  const [room, setRoom] = useState(1);
 
   const handleChangeStart = (e) => {
     setStartDateOpen(!startDateOpen);
@@ -76,13 +79,16 @@ function DateCheck({
 
       const counts = response.data;
       setCount(counts);
-      setSearch(!search); // search 상태를 업데이트하여 렌더링 갱신
-      console.log(counts); // 응답으로 받은 방 개수를 출력
+      setSearch(!search);
+      console.log(counts);
     } catch (error) {
       console.error("Error fetching room counts:", error);
     }
   };
 
+  useEffect(() => {
+    dateCheck();
+  }, []);
   // useEffect(() => {
   //   fetch("/roomList/dateCheck")
   //     .then((res) => {
@@ -120,14 +126,14 @@ function DateCheck({
             {format(endDate, "yyyy년 MM월 dd일")}
           </span>
         </div>
-        <div className="people">
+        {/* <div className="people">
           <span className="people-text1">객실</span>
           <div>
             <span onClick={peopleHandler} className="people-text2">
               {room}
             </span>
           </div>
-        </div>
+        </div> */}
         <div className="people">
           <span className="people-text1">어른</span>
           <div>
@@ -193,8 +199,6 @@ function DateCheck({
           setChild={setChild}
           baby={baby}
           setBaby={setBaby}
-          room={room}
-          setRoom={setRoom}
         />
       )}
     </>

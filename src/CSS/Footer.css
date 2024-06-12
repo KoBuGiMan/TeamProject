@@ -24,6 +24,8 @@
   height: 80px;
   right: 13%;
   top: 20%;
+  display: inline-block;
+  background-image: url("../../public/images/footerLogo.png");
 }
 
 .footer-title {

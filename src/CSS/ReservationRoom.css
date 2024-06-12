@@ -1,7 +1,332 @@
 .ReservationRoom-body {
   position: relative;
+  top: 15px;
   width: 1100px;
-  height: 1100px;
-  border: 1px solid black;
+  height: 1050px;
   margin: 0 auto;
+}
+
+.res-title {
+  font-size: 40px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  width: 180px;
+  height: 45px;
+  text-align: center;
+  border-left: brown 4px solid;
+}
+
+.res-side {
+  position: relative;
+  margin-top: 70px;
+  height: 90%;
+  width: 31%;
+  display: inline-block;
+  bottom: 25px;
+  background-color: rgb(235, 235, 235);
+}
+
+.res-side-image {
+  position: relative;
+  height: 150px;
+  width: 300px;
+  top: 100px;
+  margin: 0 auto;
+}
+
+.res-side-image-src {
+  height: 150px;
+  width: 300px;
+}
+
+.res-side-content {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-size: 20px;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+.res-side-content-object {
+  margin-top: 20px;
+
+}
+
+
+.res-main {
+  position: relative;
+  margin-top: 110px;
+  height: 85%;
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  bottom: 1068px;
+  left: 341px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.res-main-box {
+  position: relative;
+  width: 90%;
+  height: 95%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-top: 49px;
+}
+
+.res-main-box-title {
+  font-size: 28px;
+  border-bottom: 2px rgb(63, 63, 63) solid;
+  height: 50px;
+}
+
+.res-main-box-title-text {
+  position: relative;
+  margin-left: 10px;
+  top: 5px;
+}
+
+.res-main-box-content {
+  position: relative;
+  top: 30px;
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+}
+
+.res-main-box-content-name {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.res-main-box-content-name-text {
+  border: none;
+  border-bottom: 2px rgb(163, 163, 163) solid;
+  font-size: 18px;
+  outline: none;
+}
+
+.res-main-box-content-car {
+  margin-top: 40px;
+
+}
+
+.res-main-box-content-car-text {
+  font-size: 20px;
+}
+
+.res-main-box-content-car-box-select {
+  border: 2px rgb(190, 190, 190) solid;
+  width: 150px;
+  height: 70px;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(219, 219, 219);
+}
+
+.res-main-box-content-car-box-noneSelect {
+  border: 1px rgb(179, 179, 179) solid;
+  width: 150px;
+  height: 70px;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: grey;
+}
+
+.res-main-box-content-car-box-text {
+  position: relative;
+  font-size: 20px;
+  top: 23px;
+}
+
+.res-main-box-content-address {
+  margin-top: 20px;
+  height: 120px;
+
+}
+
+.res-main-box-content-address-title {
+  font-size: 20px;
+}
+
+.res-main-box-content-address-zoneCode {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.res-main-box-content-address-zoneCode-box {
+  width: 120px;
+  height: 20px;
+}
+
+.res-main-box-content-address-button {
+  font-size: 14px;
+  width: 80px;
+  height: 23px;
+  border: 1px solid rgb(126, 126, 126);
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.res-main-box-content-address-button:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.res-main-box-content-address-button-text {
+  position: relative;
+  top: 3px;
+}
+
+.res-main-box-content-address-input {
+  margin-top: 5px;
+}
+
+.res-main-box-content-address-input-text {
+  width: 300px;
+}
+
+.res-main-box-content-address-plus {
+  margin-top: 7px;
+}
+
+.res-main-box-content-address-plus-text {
+  outline: none;
+  width: 400px;
+}
+
+.res-main-box-content-address-modal {
+  position: relative;
+  left: 350px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 10px;
+  text-align: center;
+}
+
+.res-main-box-content-phone {
+  margin-top: 25px;
+}
+
+.res-main-box-content-phone-title {
+  font-size: 20px;
+}
+
+.res-main-box-content-phone-number {
+  margin-top: 15px;
+  border-bottom: 2px rgb(163, 163, 163) solid;
+  width: 45px;
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+.res-main-box-content-phone-number-text {
+  position: relative;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.res-main-box-content-phone-check {
+  width: 110px;
+  height: 30px;
+  border: 1px black solid;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.res-main-box-content-phone-check:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.res-main-box-content-phone-check2 {
+  width: 110px;
+  height: 30px;
+  border: 1px black solid;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  background-color: rgb(219, 219, 219);
+  color: white;
+}
+
+.res-main-box-content-phone-check-text {
+  position: relative;
+  top: 6px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.res-main-box-content-phone-check-verCheck {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.res-main-box-content-phone-check-verCheck-btn {
+  border: 1px black solid;
+  width: 120px;
+  height: 25px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  bottom: 6px;
+  cursor: pointer;
+}
+
+.res-main-box-content-phone-check-verCheck-btn2 {
+  border: 1px black solid;
+  width: 120px;
+  height: 25px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  bottom: 6px;
+  cursor: pointer;
+  background-color: rgb(219, 219, 219);
+  color: white;
+}
+
+
+.res-main-box-content-phone-check-verCheck-btn:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.res-main-box-content-phone-check-verCheck-btn-text {
+  position: relative;
+  top: 4px;
+}
+
+.res-main-box-content-email {
+  margin-top: 20px;
+}
+
+.res-main-box-content-email-box {
+  margin-bottom: 15px;
+}
+
+.res-main-box-content-email-text {
+  outline: none;
 }

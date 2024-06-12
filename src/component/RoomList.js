@@ -3,18 +3,15 @@ import { useNavigate } from "react-router-dom";
 
 function RoomList({
   isLogin,
-  startDate,
-  setStartDate,
-  endDate,
-  setEndDate,
   sum,
+  count,
+  setCount,
+  setRoomRole,
+  price,
+  setPrice,
+  role,
+  setRole,
 }) {
-  const [rooms, setRooms] = useState([]);
-  const [price, setPrice] = useState([]);
-  const [role, setRole] = useState([]);
-  const [standardCnt, setStandardCnt] = useState([]);
-  const [deluxeCnt, setDeluxeCnt] = useState([]);
-  const [luxuryCnt, setLuxuryCnt] = useState([]);
   const nav = useNavigate();
 
   useEffect(() => {
@@ -22,7 +19,6 @@ function RoomList({
       try {
         const res = await fetch("/rooms");
         const data = await res.json();
-        setRooms(data);
 
         const prices = data.map((room) => room.roomPrice);
         setPrice(prices);
@@ -34,19 +30,67 @@ function RoomList({
       }
     };
     fetchRooms();
-  }, []);
 
+    const fetchRoomCounts = async () => {
+      try {
+        const response = await fetch("roomList/nowDateCheck", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setCount(data);
+      } catch (err) {}
+    };
+
+    fetchRoomCounts();
+  }, []);
   const changePage = () => {
     nav("/reservation/reservationRoom");
   };
 
   const loginCheck = () => {
-    if (isLogin) {
-      changePage();
-    } else {
-      alert("로그인이 필요합니다");
-      nav("/login");
-    }
+    // if (isLogin) {
+    //   changePage();
+    // } else {
+    //   alert("로그인이 필요합니다");
+    //   nav("/login");
+    // }
+    changePage();
+  };
+
+  const loginCheckStandard = () => {
+    setRoomRole("standard");
+    changePage();
+  };
+  const loginCheckDeluxe = () => {
+    setRoomRole("deluxe");
+    changePage();
+  };
+  const loginCheckLuxury = () => {
+    setRoomRole("luxury");
+    changePage();
+  };
+
+  const standardClick = () => {
+    setRoomRole("standard");
+    nav("/rooms");
+  };
+
+  const deluxeClick = () => {
+    setRoomRole("deluxe");
+    nav("/rooms");
+  };
+
+  const luxuryClick = () => {
+    setRoomRole("luxury");
+    nav("/rooms");
   };
 
   return (
@@ -62,6 +106,7 @@ function RoomList({
               className="area-img"
               src="./images/standardBed.jpg"
               alt="standard"
+              onClick={standardClick}
             />
           </div>
           <div className="area-info">
@@ -75,13 +120,11 @@ function RoomList({
               <span>체크인 17:00 ~ 체크아웃 11:00</span>
             </div>
             <div className="area-info-text">
-              <span>잔여객실: </span>
+              <span>잔여객실:{count[0]} </span>
             </div>
-            <div style={{ left: "573px" }} className="area-price">
-              {price[0] * sum} ₩
-            </div>
+            <div className="area-price">{price[0] * sum} ₩</div>
           </div>
-          <div onClick={loginCheck} className="area-button">
+          <div onClick={loginCheckStandard} className="area-button">
             <span className="area-button-text">예약</span>
           </div>
         </div>
@@ -92,6 +135,7 @@ function RoomList({
               src="./images/deluxeBed.jpg"
               className="area-img"
               alt="deluxe"
+              onClick={deluxeClick}
             />
           </div>
           <div className="area-info">
@@ -105,11 +149,11 @@ function RoomList({
               <span>체크인 17:00 ~ 체크아웃 11:00</span>
             </div>
             <div className="area-info-text">
-              <span>객실등급 : 스탠다드</span>
+              <span>잔여객실:{count[1]}</span>
             </div>
             <div className="area-price">{price[1] * sum} ₩</div>
           </div>
-          <div onClick={loginCheck} className="area-button">
+          <div onClick={loginCheckDeluxe} className="area-button">
             <span className="area-button-text">예약</span>
           </div>
         </div>
@@ -120,6 +164,7 @@ function RoomList({
               src="./images/luxuryBed.jpg"
               className="area-img"
               alt="luxury"
+              onClick={luxuryClick}
             />
             <div className="area-info">
               <div className="area-info-text">
@@ -132,12 +177,12 @@ function RoomList({
                 <span>체크인 17:00 ~ 체크아웃 11:00</span>
               </div>
               <div className="area-info-text">
-                <span>객실등급 : 스탠다드</span>
+                <span>잔여객실:{count[2]}</span>
               </div>
               <div className="area-price">{price[2] * sum} ₩</div>
             </div>
             <div
-              onClick={loginCheck}
+              onClick={loginCheckLuxury}
               className="area-button"
               style={{ bottom: "195px" }}
             >

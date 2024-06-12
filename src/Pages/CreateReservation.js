@@ -13,11 +13,22 @@ function CreateReservation({
   setEndDate,
   sum,
   setSum,
+  count,
+  setCount,
+  roomRole,
+  setRoomRole,
+  price,
+  setPrice,
+  role,
+  setRole,
+  adult,
+  setAdult,
+  child,
+  setChild,
+  baby,
+  setBaby,
 }) {
   const [room, setRoom] = useState([]);
-  const [roomId, setRoomId] = useState("");
-
- 
 
   useEffect(() => {
     fetch("/rooms")
@@ -43,6 +54,14 @@ function CreateReservation({
         setEndDate={setEndDate}
         sum={sum}
         setSum={setSum}
+        count={count}
+        setCount={setCount}
+        adult={adult}
+        setAdult={setAdult}
+        child={child}
+        setChild={setChild}
+        baby={baby}
+        setBaby={setBaby}
       />
       <div>
         {/* <div>{roomId}</div>
@@ -55,6 +74,14 @@ function CreateReservation({
         setEndDate={setEndDate}
         isLogin={isLogin}
         sum={sum}
+        count={count}
+        setCount={setCount}
+        roomRole={roomRole}
+        setRoomRole={setRoomRole}
+        price={price}
+        setPrice={setPrice}
+        role={role}
+        setRole={setRole}
       />
     </div>
   );

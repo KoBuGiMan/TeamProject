@@ -3,7 +3,7 @@ import "../CSS/Footer.css";
 function Footer() {
   return (
     <div className="footerBody">
-      <img className="footer-logo-img" src="./images/logo.png" alt="image" />
+      <div className="footer-logo-img" />
       <div className="footer-title">
         <span>ROYAL HOTEL</span>
       </div>

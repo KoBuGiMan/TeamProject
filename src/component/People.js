@@ -52,7 +52,7 @@ function People({
   return (
     <>
       <div className="people-list">
-        <div className="people-list-box">
+        {/* <div className="people-list-box">
           <span className="people-list-box-text">객실</span>
           <div>
             <span onClick={roomPlus} className="plus">
@@ -63,7 +63,7 @@ function People({
               -
             </span>
           </div>
-        </div>
+        </div> */}
         <div className="people-list-box">
           <span className="people-list-box-text">어른</span>
           <div>
