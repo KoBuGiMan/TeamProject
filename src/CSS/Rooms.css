@@ -1,0 +1,241 @@
+.roomBody {
+
+  width: 1200px;
+  height: 2800px;
+  margin: 0 auto;
+
+}
+
+.roleBar {
+  position: relative;
+  top: 3%;
+  left: 4.1%;
+  width: 450px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.roleBar-content {
+  position: relative;
+  width: 115px;
+  height: 38px;
+  display: inline-block;
+  border: 1px rgb(206, 206, 206) solid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.roleBar-content-text {
+  position: relative;
+  top: 25%;
+  font-size: 17px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 500;
+}
+
+.list {
+  position: relative;
+  top: 3%;
+  height: 1500px;
+}
+
+.content {
+  position: relative;
+  width: 1102px;
+  height: 2000px;
+  top: 5%;
+  margin: 0 auto;
+  border-top: 1px black solid;
+}
+
+.content-title {
+  position: relative;
+  top: 1%;
+  left: 3%;
+  font-family: "Amiri", serif;
+}
+
+.content-box {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  height: 550px;
+  top: 3%;
+  overflow: hidden;
+
+}
+
+.content-text {
+  position: relative;
+  top: 7%;
+  left: 4.5%;
+  width: 30%;
+  height: 45px;
+  font-family: "Amiri", serif;
+  font-weight: 800;
+  font-size: 40px;
+  background-color: rgb(255, 255, 255);
+  border-left: 4px brown solid;
+  padding-left: 10px;
+  color: brown;
+}
+
+.content-text2 {
+  position: relative;
+  top: 9%;
+  left: 4.5%;
+  width: 1000px;
+  height: 75px;
+  font-size: 50px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 700;
+  color: rgb(32, 32, 32);
+  border-bottom: 4px solid black;
+}
+
+.bathroom {
+  position: relative;
+  top: 14%;
+  left: 4.5%;
+}
+
+.bathroom-text {
+  position: relative;
+  font-size: 25px;
+  left: 65%;
+  top: 2%;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.breakfast {
+  position: relative;
+  top: 19%;
+  left: 42%;
+}
+
+.breakfast-text {
+  position: relative;
+  font-size: 25px;
+  left: 4.5%;
+  top: 7%;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.breakfast-img {
+  width: 588px;
+  height: 400px;
+}
+
+.object {
+  position: relative;
+  top: 24%;
+  left: 4.5%;
+}
+
+.object-img {
+  width: 588px;
+  height: 400px;
+}
+
+.object-text {
+  position: relative;
+  font-size: 25px;
+  left: 65%;
+  top: 12%;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+
+.list-select {
+  position: relative;
+  width: 204px;
+  height: 43px;
+  top: 6%;
+  left: 4.5%;
+  text-align: center;
+  z-index: 2;
+}
+
+.list-select-object {
+  display: inline-block;
+  font-size: 20px;
+  height: 100%;
+  width: 48%;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  cursor: pointer;
+}
+
+.list-select-object-text::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px black;
+  transform: scale(0);
+  transition: transform 250ms ease-in-out;
+  border-radius: 12px;
+}
+
+.list-select-object-text:hover::after {
+  transform: scale(1);
+}
+
+.list-select-object-text {
+  position: relative;
+  top: 25%;
+}
+
+
+.object-list {
+  position: relative;
+  width: 1102px;
+  height: 500px;
+  top: 6.5%;
+  left: 4%;
+}
+
+.object-list-banner {
+  position: relative;
+  top: 7%;
+  width: 30%;
+  height: 45px;
+  font-family: "Amiri", serif;
+  font-weight: 800;
+  font-size: 40px;
+  background-color: rgb(255, 255, 255);
+  border-left: 4px brown solid;
+  left: 5px;
+  padding-left: 10px;
+  color: brown;
+}
+
+.object-list-title {
+  position: relative;
+  top: 12%;
+  font-size: 30px;
+  border-bottom: 4px solid black;
+  margin-left: 7px;
+}
+
+.object-list-title-text {
+
+  font-size: 50px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 700;
+  color: rgb(32, 32, 32);
+  margin-bottom: 20px;
+}
+
+.shell {
+  position: relative;
+  width: 500px;
+  height: 900px;
+  top: 25%;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 700;
+
+}

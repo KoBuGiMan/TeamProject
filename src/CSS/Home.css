@@ -1,0 +1,95 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.home {
+  background-image: url("../../public/images/MainPageBackground.jpg");
+  width: 100%;
+  height: 980px;
+
+}
+
+.back-box-font {
+  position: relative;
+  top: 10%;
+  color: #ccd3d9;
+  font-size: 60px;
+  font-family: "Amiri", serif;
+  font-weight: 400;
+  animation: fadein 3s;
+}
+
+.back {
+  text-align: center;
+  height: 980px;
+}
+
+.back-box {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  margin: 0 auto;
+  width: 20%;
+  height: 17%;
+  z-index: 1;
+  cursor: pointer;
+  border: solid black 1px;
+
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.back-box::after,
+.back-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 0%;
+  border-color: white;
+  border-width: 1px;
+  transition: .5s;
+
+}
+
+.back-box::after {
+  height: 100%;
+  border-style: solid none;
+}
+
+.back-box::before {
+  width: 100%;
+  border-style: none solid;
+}
+
+.back-box:hover::after,
+.back-box:hover::before {
+  width: 100%;
+  height: 100%;
+
+}
+
+.reservation {
+  z-index: 3;
+
+}
+
+.reservation-text {
+  position: relative;
+  font-size: 40px;
+  color: #ffffff;
+  font-family: "Amiri", serif;
+  font-weight: 600;
+  top: 20%;
+}

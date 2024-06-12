@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.body {
+  margin: 0 auto;
+  top: 100px;
+  width: 1200px;
+  background-color: rgb(255, 255, 255);
+  height: 700px;
+}
+
+.signin {
+  font-size: 70px;
+  font-family: "Amiri", serif;
+  font-weight: 700;
+}
+
+.text {
+  position: relative;
+  font-size: 35px;
+  border: none;
+  background-color: rgb(247, 245, 245);
+  margin: 8px 0px;
+  border-radius: 8px;
+}
+
+.text-div {
+  position: relative;
+  top: 3%;
+}
+
+.text:focus {
+  outline: none;
+}
+
+.textArea {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  height: 500px;
+  width: 800px;
+  left: 15%;
+  border: solid 1px black;
+  border-radius: 12px;
+}
+
+.loginbtn {
+  position: relative;
+  top: 14%;
+  left: 25%;
+  font-size: 30px;
+  width: 400px;
+  height: 50px;
+  background-color: rgb(235, 232, 232);
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.loginbtn:hover {
+  background-color: rgb(218, 217, 217);
+
+}
+
+.loginbtn-text {
+  position: relative;
+  top: 15%;
+  font-family: "Amiri", serif;
+  font-weight: 700;
+}
+
+.colum {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  position: relative;
+  right: 22%;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.create {
+  position: relative;
+  width: 400px;
+  height: 50px;
+  background-color: rgb(235, 232, 232);
+  left: 25%;
+  top: 18%;
+  border-radius: 12px;
+}
+
+.create-text {
+  position: relative;
+  font-size: 30px;
+  font-family: "Amiri", serif;
+  top: 15%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.create:hover {
+  background-color: rgb(218, 217, 217);
+}

@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  padding: 15px 0px;
+  text-align: right;
+}
+
+
+.header-link {
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  right: 1350px;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+}
+
+
+
+.link {
+  position: relative;
+  bottom: 20px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 0.7%;
+  text-transform: uppercase;
+  display: inline-block;
+  right: 20px;
+
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.link::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px black;
+  transform: scale(0);
+  transition: transform 250ms ease-in-out;
+}
+
+
+.link:hover::after {
+  transform: scale(1);
+}
+
+.logo {
+  background-image: url("../../public/images/headerLogo.png");
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
