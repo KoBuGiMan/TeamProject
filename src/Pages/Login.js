@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/Login.css";
 
-
 function Login({ changeLoginId, changeIsLogin }) {
-  const [loginId, setLoginId] = useState("");
+  const [LoginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
   const [users, setUsers] = useState([]);
@@ -23,7 +22,7 @@ function Login({ changeLoginId, changeIsLogin }) {
   useEffect(() => {
     if (isLogin) {
       console.log("isLogin: " + isLogin);
-      changeLoginId(loginId);
+      changeLoginId(LoginId);
       changeIsLogin(isLogin);
       navigate("/");
     }
@@ -36,8 +35,8 @@ function Login({ changeLoginId, changeIsLogin }) {
     setPassword(data.target.value);
   };
   const Login = () => {
-    if (loginId !== "" && password !== "") {
-      const foundUser = users.find((user) => user.loginId === loginId);
+    if (LoginId !== "" && password !== "") {
+      const foundUser = users.find((user) => user.loginId === LoginId);
       if (foundUser) {
         if (password === foundUser.password) {
           setIsLogin(true);
@@ -70,7 +69,7 @@ function Login({ changeLoginId, changeIsLogin }) {
                 className="text"
                 minLength="8"
                 type="text"
-                value={loginId}
+                value={LoginId}
                 onChange={OnChangeId}
                 placeholder=" ID"
               />

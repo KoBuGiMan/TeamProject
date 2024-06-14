@@ -12,6 +12,8 @@ import LoginHeader from "../Pages/LoginHeader.js";
 import SelectRoomRole from "../Pages/SelectRoomRole.js";
 import Footer from "../Pages/Footer.js";
 import ReservationRoom from "../Pages/ReservationRoom.js";
+import ReservationComplete from "../Pages/ReservationComplete.js";
+import Enjoy from "../Pages/Enjoy.js";
 
 function Routers() {
   const [loginId, setLoginId] = useState("");
@@ -117,6 +119,7 @@ function Routers() {
               <SelectRoomRole setRoomRole={setRoomRole} roomRole={roomRole} />
             }
           />
+          <Route path="/enjoy" element={<Enjoy />} />
           <Route
             path="/reservation/reservationRoom"
             element={
@@ -139,8 +142,13 @@ function Routers() {
                 setEmail={setEmail}
                 zoneCode={zoneCode}
                 setZoneCode={setZoneCode}
+                loginId={loginId}
               />
             }
+          />
+          <Route
+            path="/reservation/complete"
+            element={<ReservationComplete loginId={loginId} />}
           />
         </Routes>
         <Footer />

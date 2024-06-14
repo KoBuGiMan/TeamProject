@@ -1,0 +1,442 @@
+/* 공통 스타일 */
+.body {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+
+.travel h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.travel h2 {
+    font-size: 30px;
+    text-align: left;
+
+}
+
+.travel h3 {
+    font-size: 20px;
+    text-align: left;
+}
+
+a,
+.website {
+    text-decoration: none;
+    color: black;
+}
+
+span {
+    font-size: 14px;
+}
+
+.website {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: 0.1px solid #ccc;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.website:hover {
+    background-color: #e0e0e0;
+}
+
+.travel li {
+    text-align: left;
+    font-size: 14px;
+}
+
+/* 랜드마크 스타일 */
+.land {
+    text-align: left;
+    display: flex;
+}
+
+.land h3 {
+    text-align: left;
+}
+
+.land .image-container .land-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.land p {
+    text-align: left;
+}
+
+.land-box1,
+.land-box2,
+.land-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 0 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.land-box1 {
+    height: 380px;
+    width: 300px;
+}
+
+.land-box2 {
+    height: 400px;
+    width: 300px;
+}
+
+.land-box3 {
+    height: 320px;
+    width: 300px;
+}
+
+/* 쇼핑몰 스타일 */
+.shop {
+    text-align: center;
+    display: flex;
+
+}
+
+.shop h3 {
+    text-align: left;
+}
+
+.shop .image-container .shop-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.shop p {
+    text-align: left;
+}
+
+.shop-box1,
+.shop-box2,
+.shop-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.shop-box1 {
+    height: 380px;
+    width: 300px;
+}
+
+.shop-box2 {
+    height: 360px;
+    width: 300px;
+}
+
+.shop-box3 {
+    height: 340px;
+    width: 300px;
+}
+
+/* 시장 스타일 */
+.market {
+    text-align: center;
+    display: flex;
+
+}
+
+.market h3 {
+    text-align: left;
+}
+
+.market .image-container .market-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.market p {
+    text-align: left;
+}
+
+.market-box1,
+.market-box2,
+.market-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.market-box1 {
+    height: 360px;
+    width: 320px;
+}
+
+.market-box2 {
+    height: 360px;
+    width: 300px;
+}
+
+.market-box3 {
+    height: 340px;
+    width: 300px;
+}
+
+/* 테마파크 스타일 */
+.park {
+    text-align: center;
+    display: flex;
+
+}
+
+.park h3 {
+    text-align: left;
+}
+
+.park .image-container .park-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.park p {
+    text-align: left;
+}
+
+.park-box1,
+.park-box2,
+.park-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.park-box1 {
+    height: 380px;
+    width: 300px;
+}
+
+.park-box2 {
+    height: 380px;
+    width: 300px;
+}
+
+.park-box3 {
+    height: 340px;
+    width: 300px;
+}
+
+/* 전망대 스타일 */
+.observatory {
+    text-align: center;
+    display: flex;
+
+}
+
+.observatory h3 {
+    text-align: left;
+}
+
+.observatory .image-container .observatory-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.observatory p {
+    text-align: left;
+}
+
+.observatory-box1,
+.observatory-box2,
+.observatory-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.observatory-box1 {
+    height: 360px;
+    width: 300px;
+}
+
+.observatory-box2 {
+    height: 380px;
+    width: 300px;
+}
+
+.observatory-box3 {
+    height: 340px;
+    width: 300px;
+}
+
+/* 역사박물관 스타일 */
+.museum {
+    text-align: center;
+    display: flex;
+
+}
+
+.museum h3 {
+    text-align: left;
+}
+
+.museum .image-container .museum-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.museum p {
+    text-align: left;
+}
+
+.museum-box1,
+.museum-box2,
+.museum-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.museum-box1 {
+    height: 380px;
+    width: 300px;
+}
+
+.museum-box2 {
+    height: 360px;
+    width: 300px;
+}
+
+.museum-box3 {
+    height: 380px;
+    width: 300px;
+}
+
+/* 산책로 스타일 */
+.walk {
+    text-align: center;
+    display: flex;
+
+}
+
+.walk h3 {
+    text-align: left;
+}
+
+.walk .image-container .walk-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.walk p {
+    text-align: left;
+}
+
+.walk-box1,
+.walk-box2,
+.walk-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.walk-box1 {
+    height: 340px;
+    width: 300px;
+}
+
+.walk-box2 {
+    height: 360px;
+    width: 300px;
+}
+
+.walk-box3 {
+    height: 320px;
+    width: 300px;
+}
+
+/* 수조관 스타일 */
+.aquarium {
+    text-align: center;
+    display: flex;
+
+}
+
+.aquarium h3 {
+    text-align: left;
+}
+
+.aquarium .image-container .aquarium-image {
+    max-width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.aquarium p {
+    text-align: left;
+}
+
+.aquarium-box1,
+.aquarium-box2,
+.aquarium-box3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 160px 0;
+    text-align: left;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.aquarium-box1 {
+    height: 360px;
+    width: 300px;
+}
+
+.aquarium-box2 {
+    height: 340px;
+    width: 300px;
+}
+
+.aquarium-box3 {
+    height: 360px;
+    width: 300px;
+}
